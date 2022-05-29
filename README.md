@@ -1,4 +1,4 @@
-![MusicStats]([http://url/to/img.png](https://zupimages.net/up/22/21/271o.png))
+![MusicStats](https://zupimages.net/up/22/21/271o.png)
 
 An universal Spotify Wrapped/Apple Music Replay website project!
 
