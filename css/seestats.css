@@ -1,0 +1,158 @@
+.logo {
+    position: absolute;
+    font-size: 30pt;
+    margin: 10px;
+    cursor: pointer;
+    transition: .2s ease-out color;
+}
+
+.logo:hover {
+    color: #4a4a4a;
+}
+
+.logo:active {
+    color: #6e6e6e;
+}
+
+
+.navbar {
+    position: fixed;
+    width: 200px;
+    height: 40px;
+    background-color: #999999;
+    border: 1px solid gray;
+    border-radius: 15px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar img {
+    width: 20px;
+    padding: 10px;
+    filter: invert(1);
+    position: absolute;
+    cursor: pointer;
+    transition: .2s ease filter;
+}
+
+.navbar img:hover {
+    filter: invert(1) brightness(.9);
+}
+
+.navbar img:active {
+    filter: invert(1) brightness(.8);
+}
+
+.navbar img:first-of-type {
+    transform: rotate(180deg);
+    left: 10px;
+}
+
+.navbar img:last-of-type {
+    right: 10px;
+}
+
+.panes-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.panes-wrapper > div {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    border: 1px solid #cdcdcd;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    transform: translate(-50%, calc(-50% - 20px));
+    z-index: -1;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.panes-wrapper > div.active, .panes-wrapper > div.hide {
+    z-index: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+/* intro pane */
+
+.panes-wrapper > div:first-of-type div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0px;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(1.5);
+    letter-spacing: 3px;
+    opacity: 1;
+    transition: .4s ease-in-out;
+    animation: intro-div-enter 1s cubic-bezier(0.38, 0.02, 0.24, 0.99);
+}
+
+@keyframes intro-div-enter {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 100px));
+        letter-spacing: .5px;
+    }
+
+    60% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        letter-spacing: 3px;
+        opacity: 1;
+    }
+}
+
+.panes-wrapper > div:first-of-type div h1 {
+    font-size: 52pt;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.panes-wrapper > div:first-of-type div h3 {
+    margin: -20px;
+    font-weight: 400;
+    opacity: 0;
+    animation: intro-text-enter .4s cubic-bezier(0.38, 0.02, 0.24, 0.99) 1s forwards;
+}
+
+.panes-wrapper > div:first-of-type div h3:first-of-type {
+    animation: intro-text-enter .4s cubic-bezier(0.38, 0.02, 0.24, 0.99) .7s forwards;
+}
+
+.panes-wrapper > div:first-of-type span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    letter-spacing: 1.5px;
+    opacity: 0;
+    animation: intro-text-enter .4s cubic-bezier(0.38, 0.02, 0.24, 0.99) 3s forwards;
+}
+
+@keyframes intro-text-enter {
+    100% {
+        opacity: 1;
+        transform: scale(.8);
+    }
+}
+
+.panes-wrapper > div:first-of-type.hide div {
+    transform: translate(-50%, calc(-50% + 60px)) scale(.8) !important;
+    opacity: 0 !important;
+    letter-spacing: 0px !important;
+}
+
+.panes-wrapper > div:first-of-type.hide span {
+    opacity: 0 !important;
+}

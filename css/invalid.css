@@ -1,0 +1,8 @@
+h1, h3 {
+    position: relative;
+    top: 50%;
+    transform: translateY(calc(-50% - 140px));
+    text-align: center;
+    margin: 0px;
+    font-weight: 400;
+}

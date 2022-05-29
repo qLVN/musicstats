@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Year 2021 - MusicStats</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="icon" href="assets\favicon.ico">
+        <link rel="stylesheet" href="css\material.css">
+        <link rel="stylesheet" href="css\main.css">
+        <link rel="stylesheet" href="css\seestats.css">
+        <script src="js/main.js"></script>
+        <script src="js/seestats.js"></script>
+    </head>
+    <body>
+        <h1 class="logo" onclick="link('home.htm', 'here')">Music<i>Stats</i><br></h1>
+        <div class="panes-wrapper" id="panes-wrapper">
+            <div class="active">
+                <div>
+                    <h3>Welcome to your</h3>
+                    <h1>Year 2021</h1>
+                    <h3>Music replay</h3>
+                </div>
+                <span>Use the bar below to navigate through your replay</span>
+            </div>
+            <div>Second part here</div>
+        </div>
+        <div class="navbar">
+            <img src="assets/arrow.svg" onclick="navThroughPanes('previous')" draggable="false" />
+            <img src="assets/arrow.svg" onclick="navThroughPanes('next')" draggable="false" />
+        </div>
+        <span class="wm">© <a href="https://github.com/LIVENVARANE" target="_blank" title="This link will open in a new tab.">LVN</a></span>
+    </body>
+</html>
